@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.records.RecordAddRegistratureViewController">
+    <children>
+        <Label layoutX="161.0" layoutY="14.0" text="Записать на прием">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <Button layoutX="462.0" layoutY="329.0" mnemonicParsing="false" onAction="#onDoneClicked" prefHeight="18.0" prefWidth="106.0" text="Записать" />
+        <DatePicker fx:id="Date" editable="false" layoutX="243.0" layoutY="201.0" prefHeight="26.0" prefWidth="149.0" promptText="date" />
+        <Label layoutX="173.0" layoutY="160.0" text="Пациент" />
+        <Label layoutX="173.0" layoutY="205.0" text="Дата" />
+        <ComboBox fx:id="patientsChoice" layoutX="243.0" layoutY="156.0" prefWidth="150.0" />
+        <TextField fx:id="Time" layoutX="244.0" layoutY="242.0" promptText="time" />
+        <Label layoutX="173.0" layoutY="246.0" text="Время" />
+        <Button fx:id="exit" layoutX="462.0" layoutY="360.0" mnemonicParsing="false" onAction="#onExit" prefHeight="18.0" prefWidth="106.0" text="Назад" />
+        <Label layoutX="173.0" layoutY="117.0" text="Врач" />
+        <ComboBox fx:id="doctorsChoice" layoutX="243.0" layoutY="113.0" prefWidth="150.0" />
+      <ImageView layoutX="107.0" layoutY="13.0">
+         <image>
+            <Image url="@../../icon/appointment.png" />
+         </image>
+      </ImageView>
+    </children>
+
+</AnchorPane>

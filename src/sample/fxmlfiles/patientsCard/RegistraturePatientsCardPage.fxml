@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.patientsCard.PatientsCardRegistratureViewController">
+    <children>
+        <Label layoutX="64.0" layoutY="42.0" prefHeight="18.0" prefWidth="54.0" text="Имя" />
+        <Label layoutX="64.0" layoutY="83.0" text="Фамилия" />
+        <Label layoutX="64.0" layoutY="123.0" text="Отчество *" />
+        <Label layoutX="64.0" layoutY="163.0" text="Дата рождения" />
+        <Label layoutX="62.0" layoutY="243.0" text="Номер телефона" />
+        <Label layoutX="62.0" layoutY="286.0" text="Паспорт" />
+        <Label layoutX="62.0" layoutY="326.0" text="Полис" />
+        <Label layoutX="64.0" layoutY="200.0" text="Адрес" />
+        <Text fx:id="firstname" layoutX="162.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.041015625" />
+        <Text fx:id="lastname" layoutX="162.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.041015625" />
+        <Text fx:id="fathername" layoutX="162.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.041015625" />
+        <Text fx:id="birthdate" layoutX="162.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.041015625" />
+        <Text fx:id="adress" layoutX="162.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.041015625" />
+        <Text fx:id="phone" layoutX="162.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.041015625" />
+        <Text fx:id="passport" layoutX="162.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.041015625" />
+        <Text fx:id="policy" layoutX="162.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="90.041015625" />
+        <TableView fx:id="sourceTable" layoutX="284.0" layoutY="65.0" prefHeight="270.0" prefWidth="278.0">
+            <columns>
+                <TableColumn fx:id="diagnosisDate" prefWidth="78.4000244140625" text="Дата" />
+                <TableColumn fx:id="diagnosisComment" prefWidth="92.0" text="Диагноз" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="patientsChoice" layoutX="284.0" layoutY="26.0" prefWidth="150.0" />
+      <Button fx:id="exit" layoutX="513.0" layoutY="342.0" mnemonicParsing="false" onAction="#onExit" text="Назад" />
+      <ImageView layoutX="8.0" layoutY="27.0">
+         <image>
+            <Image url="@../../icon/viewpatient.png" />
+         </image>
+      </ImageView>
+    </children>
+</Pane>

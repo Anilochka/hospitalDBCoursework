@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.records.RecordsDoctorViewController">
+   <children>
+      <TableView fx:id="sourceTable" layoutX="318.0" layoutY="24.0" prefHeight="333.0" prefWidth="192.0">
+        <columns>
+          <TableColumn fx:id="date" prefWidth="91.20001220703125" text="Дата" />
+            <TableColumn fx:id="time" prefWidth="96.0" text="Время" />
+        </columns>
+      </TableView>
+      <Button fx:id="exit" layoutX="519.0" layoutY="354.0" mnemonicParsing="false" onAction="#onExit" prefHeight="25.0" prefWidth="66.0" text="Назад" />
+      <TableView fx:id="patTable" layoutX="90.0" layoutY="24.0" prefHeight="333.0" prefWidth="228.0">
+        <columns>
+          <TableColumn fx:id="LastName" prefWidth="75.0" text="Ф пациента" />
+          <TableColumn fx:id="FirstName" prefWidth="75.0" text="И пациента" />
+            <TableColumn fx:id="FatherName" prefWidth="75.0" text="О пациента" />
+        </columns>
+      </TableView>
+      <ImageView layoutX="21.0" layoutY="24.0">
+         <image>
+            <Image url="@../../icon/appointment.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

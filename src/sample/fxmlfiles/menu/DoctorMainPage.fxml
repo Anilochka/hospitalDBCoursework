@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.menu.DoctorMainViewController">
+   <children>
+      <Button fx:id="myRecords" layoutX="225.0" layoutY="78.0" mnemonicParsing="false" onAction="#onMyRecords" prefHeight="26.0" prefWidth="150.0" text="Мой журнал записей" />
+      <Button fx:id="patientsCard" layoutX="225.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPatientCard" prefHeight="26.0" prefWidth="150.0" text="Карта пациента" />
+      <Button fx:id="makeDiagnosis" layoutX="225.0" layoutY="169.0" mnemonicParsing="false" onAction="#onMakeDiagnosis" prefHeight="26.0" prefWidth="150.0" text="Назначить диагноз" />
+       <Button fx:id="newRec" layoutX="225.0" layoutY="213.0" mnemonicParsing="false" onAction="#onMakeRecord" prefHeight="26.0" prefWidth="150.0" text="Записать на прием" />
+       <Button fx:id="logout" layoutX="275.0" layoutY="302.0" mnemonicParsing="false" onAction="#onExit" text="Выйти" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="386.0" layoutY="182.0">
+         <image>
+            <Image url="@../../icon/hospital.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="169.0" layoutY="67.0">
+         <image>
+            <Image url="@../../icon/appointment.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="169.0" layoutY="112.0">
+         <image>
+            <Image url="@../../icon/viewpatient.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="169.0" layoutY="158.0">
+         <image>
+            <Image url="@../../icon/updatepatient.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="169.0" layoutY="202.0">
+         <image>
+            <Image url="@../../icon/addpatient.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

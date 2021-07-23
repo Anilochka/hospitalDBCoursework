@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.menu.PatientViewController">
+   <children>
+      <Button fx:id="cardInfo" layoutX="224.0" layoutY="109.0" mnemonicParsing="false" onAction="#onPatientCard" prefHeight="26.0" prefWidth="150.0" text="Моя карта" />
+      <Button fx:id="specializationsInfo" layoutX="224.0" layoutY="153.0" mnemonicParsing="false" onAction="#onSpecializationList" prefHeight="26.0" prefWidth="150.0" text="Направления лечения" />
+      <Button fx:id="recordsInfo" layoutX="226.0" layoutY="201.0" mnemonicParsing="false" onAction="#onRecordsList" prefHeight="26.0" prefWidth="150.0" text="Мои записи на прием" />
+      <Button fx:id="logout" layoutX="275.0" layoutY="284.0" mnemonicParsing="false" onAction="#onExit" text="Выйти" />
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="386.0" layoutY="184.0">
+         <image>
+            <Image url="@../../icon/hospital.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="159.0" layoutY="139.0">
+         <image>
+            <Image url="@../../icon/setappoinment.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="159.0" layoutY="95.0">
+         <image>
+            <Image url="@../../icon/viewpatient.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="159.0" layoutY="190.0">
+         <image>
+            <Image url="@../../icon/appointment.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
