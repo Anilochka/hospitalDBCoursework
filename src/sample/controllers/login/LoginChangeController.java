@@ -54,7 +54,7 @@ public class LoginChangeController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("Authorization");
+        mainApp.openPage("login/Authorization");
     }
 
     @Override

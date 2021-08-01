@@ -38,16 +38,16 @@ public class LoginController implements Controller {
 
             if(user.getRole() == Role.PATIENT) {
                 mainApp.setUser(this.user);
-                mainApp.openPage("PatientMain");
+                mainApp.openPage("menu/PatientMain");
             } else if (user.getRole() == Role.DOCTOR) {
                 mainApp.setUser(this.user);
-                mainApp.openPage("DoctorMain");
+                mainApp.openPage("menu/DoctorMain");
             } else if (user.getRole() == Role.MAINDOCTOR) {
                 mainApp.setUser(this.user);
-                mainApp.openPage("MainDoctorMain");
+                mainApp.openPage("menu/MainDoctorMain");
             } else if (user.getRole() == Role.RECEPTIONIST) {
                 mainApp.setUser(this.user);
-                mainApp.openPage("RegistratureMain");
+                mainApp.openPage("menu/RegistratureMain");
             }
         } catch (Exception e) {
             mainApp.showWarningAlert("Логин или пароль неверны!");
@@ -56,7 +56,7 @@ public class LoginController implements Controller {
 
     @FXML
     void onPassChange() {
-        mainApp.openPage("LoginChange");
+        mainApp.openPage("login/LoginChange");
     }
 
     @Override

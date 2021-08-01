@@ -22,7 +22,7 @@ public class Main extends Application {
         connection = sourceProvider.getConnection();
         this.primaryStage = primaryStage;
         alertMessage = new AlertMessage();
-        openPage("Authorization");
+        openPage("login/Authorization");
         primaryStage.show();
     }
 

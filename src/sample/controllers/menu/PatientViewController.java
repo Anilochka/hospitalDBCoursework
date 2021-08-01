@@ -18,17 +18,17 @@ public class PatientViewController implements Controller {
 
     @FXML
     void onPatientCard() {
-        mainApp.openPage("PatientPatientsCard");
+        mainApp.openPage("patientsCard/PatientPatientsCard");
     }
 
     @FXML
     void onSpecializationList() {
-        mainApp.openPage("PatientSpecializations");
+        mainApp.openPage("specializations/PatientSpecializations");
     }
 
     @FXML
     void onRecordsList() {
-        mainApp.openPage("PatientSchedule");
+        mainApp.openPage("records/PatientSchedule");
     }
 
     @Override

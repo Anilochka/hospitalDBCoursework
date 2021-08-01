@@ -42,7 +42,7 @@ public class SpecializationAddController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("MainDoctorSpecializations");
+        mainApp.openPage("specializations/MainDoctorSpecializations");
     }
 
     public void setUser(Users user) {

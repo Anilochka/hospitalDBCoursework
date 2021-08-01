@@ -114,7 +114,7 @@ public abstract class RecordAddController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("DoctorMain");
+        mainApp.openPage("menu/DoctorMain");
     }
 
     public void setUser(Users user) {

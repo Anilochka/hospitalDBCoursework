@@ -125,7 +125,7 @@ public class PatientChangeInfoController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("PatientPatientsCard");
+        mainApp.openPage("patientsCard/PatientPatientsCard");
     }
 
     public void setUser(Users user) {

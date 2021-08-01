@@ -205,14 +205,14 @@ public class StaffService {
 
     public void addStaff(Staff staff) {
         try {
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO Staff(FirstName, LastName, FatherName, " +
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO Staff (FirstName, LastName, FatherName, " +
                     "SpecializationId, Phone, UserId) VALUES (?, ?, ?, ?, ?, ?)");
             ps.setString(1, staff.getFirstName());
             ps.setString(2, staff.getLastName());
             ps.setString(3, staff.getFatherName());
-            ps.setLong(4, staff.getSpecializationId());
+            ps.setInt(4, staff.getSpecializationId());
             ps.setString(5, staff.getPhone());
-            ps.setLong(6, staff.getUserId());
+            ps.setInt(6, staff.getUserId());
             ps.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error adding staff", e);

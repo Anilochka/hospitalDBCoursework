@@ -101,7 +101,7 @@ public class RecordsPatientViewController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("PatientMain");
+        mainApp.openPage("menu/PatientMain");
     }
 
     public void setUser(Users user) {

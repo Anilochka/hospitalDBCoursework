@@ -92,19 +92,9 @@ public class StaffRegistrationController implements Controller {
             mainApp.showWarningAlert("Введите все обязательные поля");
             return;
         }
-
-        Role role;
-        if (specializations.getName().equals("ГлавВрач")) {
-            role = Role.MAINDOCTOR;
-        } else if (specializations.getName().equals("Сотрудник регистратуры")) {
-            role = Role.RECEPTIONIST;
-        } else {
-            role = Role.DOCTOR;
-        }
-
-        Users user = new Users(login, password, role);
+        
         userService.addUser(login, password);
-        int userID = userService.getUserByLogin(user.getLogin()).getIdUser();
+        int userID = userService.getUserByLogin(login).getIdUser();
         staffService.addStaff(new Staff(firstname, lastname, fathername, specId, phone, userID));
 
         onExit();
@@ -112,7 +102,7 @@ public class StaffRegistrationController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("MainDoctorStaff");
+        mainApp.openPage("staff/MainDoctorStaff");
     }
 
     public void setUser(Users user) {

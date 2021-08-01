@@ -49,13 +49,13 @@ public class UserService {
     public Users getUserByLogin(String login) {
         Users user = new Users();
         try {
-            PreparedStatement ps = connection.prepareStatement("SELECT Login, Password, IdUser FROM Users WHERE Login = ?");
+            PreparedStatement ps = connection.prepareStatement("SELECT IdUser, Password FROM Users WHERE Login = ?");
             ps.setString(1, login);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                String password = rs.getString(2);
-                int id = rs.getInt(3);
+                String password = rs.getString("Password");
+                int id = rs.getInt("IdUser");
 
                 Role role = null;
 
@@ -65,14 +65,12 @@ public class UserService {
 
                 if (rs.next()) {
                     role = Role.PATIENT;
-                    return new Users(id, login, password, role);
                 } else {
-                    ps = connection.prepareStatement("SELECT SpecializationId, S.Name FROM " +
-                            "Staff INNER JOIN Specializations S ON Staff.SpecializationId = S.IdSpecialization WHERE UserId = ?");
+                    ps = connection.prepareStatement("SELECT SpecializationId FROM Staff WHERE UserId = ?");
                     ps.setInt(1, id);
                     rs = ps.executeQuery();
                     if (rs.next()) {
-                        int specId = rs.getInt(1);
+                        int specId = rs.getInt("SpecializationId");
                         if (specId == 5) {
                             role = Role.MAINDOCTOR;
                         } else if (specId == 6) {
@@ -80,9 +78,9 @@ public class UserService {
                         } else {
                             role = Role.DOCTOR;
                         }
-                        return new Users(id, login, password, role);
                     }
                 }
+                return new Users(id, login, password, role);
             }
         } catch (SQLException e) {
             throw new RuntimeException("Error getting user", e);

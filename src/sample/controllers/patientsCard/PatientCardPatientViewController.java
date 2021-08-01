@@ -43,11 +43,11 @@ public class PatientCardPatientViewController extends PatientsCardController {
 
     @FXML
     public void onChange(){
-        mainApp.openPage("PatientPatientsInfoChange");
+        mainApp.openPage("patients/PatientPatientsInfoChange");
     }
 
     @FXML
     public void onExit() {
-        mainApp.openPage("PatientMain");
+        mainApp.openPage("menu/PatientMain");
     }
 }

@@ -103,7 +103,7 @@ public class PatientAddController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("RegistratureMain");
+        mainApp.openPage("menu/RegistratureMain");
     }
 
     public void setUser(Users user) {

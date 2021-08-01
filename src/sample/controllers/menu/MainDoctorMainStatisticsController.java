@@ -17,17 +17,17 @@ public class MainDoctorMainStatisticsController implements Controller {
 
     @FXML
     void onPatients() {
-        mainApp.openPage("MainDoctorStatisticsPatients");
+        mainApp.openPage("patients/MainDoctorStatisticsPatients");
     }
 
     @FXML
     void onStaffInfo() {
-        mainApp.openPage("MainDoctorStatisticsStaff");
+        mainApp.openPage("staff/MainDoctorStatisticsStaff");
     }
 
     @FXML
     void onSpecializations() {
-        mainApp.openPage("MainDoctorStatisticsSpecializations");
+        mainApp.openPage("specializations/MainDoctorStatisticsSpecializations");
     }
 
     @Override
@@ -35,7 +35,7 @@ public class MainDoctorMainStatisticsController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("MainDoctorMain");
+        mainApp.openPage("menu/MainDoctorMain");
     }
 
     public void setUser(Users user) {

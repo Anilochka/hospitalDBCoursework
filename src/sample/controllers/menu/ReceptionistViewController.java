@@ -18,22 +18,22 @@ public class ReceptionistViewController implements Controller {
 
     @FXML
     void onRecords() {
-        mainApp.openPage("RegistratureSchedule");
+        mainApp.openPage("records/RegistratureSchedule");
     }
 
     @FXML
     void onPatientCard() {
-        mainApp.openPage("RegistraturePatientsCard");
+        mainApp.openPage("patientsCard/RegistraturePatientsCard");
     }
 
     @FXML
     void onRegistrateNewPatient() {
-        mainApp.openPage("AddNewPatient");
+        mainApp.openPage("patients/AddNewPatient");
     }
 
     @FXML
     void onMakeRecord() {
-        mainApp.openPage("AddNewRecordRegistratureView");
+        mainApp.openPage("records/AddNewRecordRegistratureView");
     }
 
     @Override

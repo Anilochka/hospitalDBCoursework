@@ -57,7 +57,7 @@ public class MainDoctorSpecializationsStatisticsController implements Controller
 
     @FXML
     public void onExit() {
-        mainApp.openPage("MainDoctorStatisticsMain");
+        mainApp.openPage("menu/MainDoctorStatisticsMain");
     }
 
     public void setUser(Users user) {

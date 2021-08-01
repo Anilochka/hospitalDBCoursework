@@ -9,7 +9,7 @@ import java.sql.Connection;
 public class SpecializationsListMainDoctorViewController extends SpecializationsListController {
     @FXML
     public void onAdd() {
-        mainApp.openPage("AddNewSpecialization");
+        mainApp.openPage("specializations/AddNewSpecialization");
     }
 
     @FXML
@@ -24,7 +24,7 @@ public class SpecializationsListMainDoctorViewController extends Specializations
 
     @Override
     public void onExit() {
-        mainApp.openPage("MainDoctorMain");
+        mainApp.openPage("menu/MainDoctorMain");
     }
 
     public void setUser(Users user) {

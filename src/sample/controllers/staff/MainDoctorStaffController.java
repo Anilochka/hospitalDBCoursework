@@ -64,7 +64,7 @@ public class MainDoctorStaffController implements Controller {
 
     @FXML
     public void onAdd() {
-        mainApp.openPage("AddNewStaff");
+        mainApp.openPage("staff/AddNewStaff");
     }
 
     @FXML
@@ -78,7 +78,7 @@ public class MainDoctorStaffController implements Controller {
 
     @FXML
     public void onExit() {
-        mainApp.openPage("MainDoctorMain");
+        mainApp.openPage("menu/MainDoctorMain");
     }
 
     public void setUser(Users user) {

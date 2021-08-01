@@ -18,27 +18,27 @@ public class MainDoctorViewController implements Controller {
 
     @FXML
     void onRecords() {
-        mainApp.openPage("MainDoctorSchedule");
+        mainApp.openPage("records/MainDoctorSchedule");
     }
 
     @FXML
     void onPatientCard() {
-        mainApp.openPage("MainDoctorPatientsCard");
+        mainApp.openPage("patientsCard/MainDoctorPatientsCard");
     }
 
     @FXML
     void onStaffInfo() {
-        mainApp.openPage("MainDoctorStaff");
+        mainApp.openPage("staff/MainDoctorStaff");
     }
 
     @FXML
     void onSpecializations() {
-        mainApp.openPage("MainDoctorSpecializations");
+        mainApp.openPage("specializations/MainDoctorSpecializations");
     }
 
     @FXML
     void  onStatistics() {
-        mainApp.openPage("MainDoctorStatisticsMain");
+        mainApp.openPage("menu/MainDoctorStatisticsMain");
     }
 
     @Override
